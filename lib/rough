@@ -1,0 +1,26 @@
+Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        padding: const EdgeInsets.all(20),
+        child: notes != []
+            ? GridView.builder(
+                itemCount: notes.length,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10),
+                itemBuilder: (BuildContext context, int index) {
+                  return GestureDetector(
+                      onTap: () =>
+                          {Get.to(const Editnote(), arguments: notes[index].id)},
+                      child: ListTile(
+                        splashColor: Colors.teal,
+                        tileColor: Colors.teal,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                        title: Text(notes[index].title),
+                        subtitle: Text(notes[index].description),
+                      ));
+                })
+            : const Text("No Data Found"),
+      ),

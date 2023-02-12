@@ -1,0 +1,1 @@
+const bgimg="assets/BgImg.png";
