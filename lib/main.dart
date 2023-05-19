@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sqflitefirstproject/pages/notepage.dart';
 import 'package:get/get.dart';
+import 'package:sqflitefirstproject/pages/splash.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -24,4 +25,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
